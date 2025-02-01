@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width", initial-scale="1">
     <link rel="stylesheet" href="index.css">
-    <script src="carousel.js"></script>
     <title>Public Health Dashboard</title>
 </head>
 <body>
@@ -15,83 +14,52 @@
     <div class="gen-info-container">
         
         <!-- General info carousel: COVID-19 -->
-        <div class="gen-info-carousel">
+        <div class="gen-info-carousel" id="covid">
             
-            <!-- Slides in carousel -->
-            <div class="carousel-slide">
+            <!-- Slides in carousel (NOT IMPLEMENTED) -->
+            <div class="carousel-slide active">
                 <h3>COVID-19</h3>
                 <p>General info on COVID rates.</p>
             </div>
             <div class="carousel-slide">
                 <p>More info.</p>
             </div>
-            <div class="carousel-slide">
-                <p>Even more info.</p>
-            </div>
             
             <!-- Controls to switch slides -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <a href="" class="carousel-control-prev"></a>
+            <a href="" class="carousel-control-next"></a>
             
-            <!-- Indicators for which slide you are on -->
-            <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>                
-            </div>
+            <!-- Indicators for which slide you are on (NOT IMPLEMENTED) -->
+            <ul class="carousel-indicators">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
 
         <!-- General info carousel: Vaccination -->
-        <div class="gen-info-carousel">
+        <div class="gen-info-carousel" id="vaccination">
 
-            <!-- Slides in carousel -->
+            <!-- Slides in carousel (NOT IMPLEMENTED) -->
             <div class="carousel-slide">
                 <h3>Vaccination</h3>
                 <p>General info on vaccination rates.</p>
             </div>
-            <div class="carousel-slide">
-                <p>More info.</p>
-            </div>
-            <div class="carousel-slide">
-                <p>Even more info.</p>
-            </div>
 
-            <!-- Controls to switch slides -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <!-- Indicators for which slide you are on (NOT IMPLEMENTED) -->
+            <ul class="carousel-indicators">
 
-            <!-- Indicators for which slide you are on -->
-            <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>   
-            </div>
+            </ul>
         </div>
 
         <!-- General info carousel: HIV -->
         <div class="gen-info-carousel">
-            
-            <!-- Slides in carousel -->
+            <ul class="carousel-indicators">
+
+            </ul>
             <div class="carousel-slide">
                 <h3>HIV</h3>
-                <p>General info on HIV rates.</p>
-            </div>
-            <div class="carousel-slide">
-                <p>More info.</p>
-            </div>
-            <div class="carousel-slide">
-                <p>Even more info.</p>
-            </div>
-
-            <!-- Controls to switch slides -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
-
-            <!-- Indicators for which slide you are on -->
-            <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>   
+                <p>General information on HIV rates.</p>
             </div>
         </div>
     </div>
