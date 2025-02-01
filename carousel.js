@@ -1,27 +1,44 @@
-let slideIndex = 0;
-showSlides(slideIndex);
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize each carousel
+    document.querySelectorAll(".gen-info-carousel").forEach((carousel, index) => {
+        carousel.dataset.index = index; // Assign an index to each carousel
+        let slides = carousel.querySelectorAll(".carousel-slide");
+        let dots = carousel.querySelectorAll(".dot");
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+        let slideIndex = 0;
+        showSlides(slideIndex, carousel);
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+        // Attach event listeners for navigation buttons
+        carousel.querySelector(".prev")?.addEventListener("click", () => plusSlides(-1, carousel));
+        carousel.querySelector(".next")?.addEventListener("click", () => plusSlides(1, carousel));
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("carousel-slide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 0 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
+        // Attach event listeners for dots
+        dots.forEach((dot, dotIndex) => {
+            dot.addEventListener("click", () => currentSlide(dotIndex, carousel));
+        });
+
+        function plusSlides(n, carousel) {
+            slideIndex += n;
+            showSlides(slideIndex, carousel);
+        }
+
+        function currentSlide(n, carousel) {
+            slideIndex = n;
+            showSlides(slideIndex, carousel);
+        }
+
+        function showSlides(n, carousel) {
+            let slides = carousel.querySelectorAll(".carousel-slide");
+            let dots = carousel.querySelectorAll(".dot");
+
+            if (n >= slides.length) slideIndex = 0;
+            if (n < 0) slideIndex = slides.length - 1;
+
+            slides.forEach((slide) => (slide.style.display = "none"));
+            dots.forEach((dot) => dot.classList.remove("active"));
+
+            slides[slideIndex].style.display = "block";
+            if (dots.length > 0) dots[slideIndex].classList.add("active");
+        }
+    });
+});
