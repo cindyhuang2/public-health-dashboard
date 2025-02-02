@@ -5,7 +5,7 @@
     <meta name="viewport" content="width-device-width", initial-scale="1">
     <link rel="stylesheet" href="index.css">
     <script src="carousel.js"></script>
-    <title>Public Health Dashboard</title>
+    <title>Public Health Dashboard</title><span>
 </head>
 <body>
     <div class="title-container"></div>
@@ -22,7 +22,7 @@
                 <h2><a class="detailed-page-link" href="pages/covid-info.html">COVID-19</a></h2>
                 <p>
                     <span style="font-weight: bold;">Cause: </span>(+) RNA virus &rarr; SARS-CoV-2<br><br>
-                    <span style="font-weight: bold">Effects: </span>potentially severe upper respiratory infection<br><br>
+                    <span style="font-weight: bold;">Effects: </span>potentially severe upper respiratory infection<br><br>
                     <span style="font-weight: bold;">Common names: </span>Covid, Coronavirus, My ShaRONA
                 </p>
             </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/covid-info.html">COVID-19</a></h2>
-                <ul>
+                <ul style="text-align: center;">
                     <li>Caused a global pandemic beginning in March 2020.</li><br>
                     <li>Vaccination against COVID-19 debuted the new technology of mRNA vaccines, considered the next generation of vaccination.</li>
                 </ul>
@@ -64,11 +64,18 @@
             </div>
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/influenza-info.html">Influenza</a></h2>
-                <p>Antigenic shift and drift are how Influenza viruses are able to evolve so quickly<br>Influenza have segmented genomes that can reassort themselves if two strains infect the same cell<br> Influenza A can do this very rapidly. B can do this quickly<br> Strains B and C do this very slowly</p>
+                <ul style= "text-align: center;">
+                    <li>Antigenic shift and drift are how Influenza viruses are able to evolve so quickly</li><br>
+                    <li>Influenza have segmented genomes that can reassort themselves if two strains infect the same cell</li><br> 
+                    <li>Influenza A can do this very rapidly. B can do this quickly. Strains C and D do this very slowly</li><br>   
+                </ul>
             </div>
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/influenza-info.html">Influenza</a></h2>
-                <p>Most Flu victims get better within a week, but the disease causes an average of 36,000 deaths per year since 2010.<br>"The Flu" is specified as an A and B strain. Type A mutates very quickly due to cross-species infection.</p>
+                <ul style="text-align: center;">
+                  <li>Most Flu victims get better within a week, but the disease causes an average of 36,000 deaths per year since 2010.</li><br>
+                    <li>"The Flu" is specified as an A and B strain. Type A mutates very quickly due to cross-species infection.</li><br>
+                </ul>
             </div>
 
             <!-- Controls to switch slides -->
@@ -91,18 +98,54 @@
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/hiv-info.html">HIV</a></h2>
                 <p>
-                    <span style="font-weight: bold;">Cause: </span><br><br>
-                    <span style="font-weight: bold">Effects: </span><br><br>
-                    <span style="font-weight: bold;">Common names: </span>
+                    <span style="font-weight: bold;">Cause:</span> DNA retrovirus via fluid transmission</span><br><br>
+                    <span style="font-weight: bold;">Effects:</span> Acquired Immunodeficiency Syndrome</span><br><br>
+                    <span style="font-weight: bold;">Common names:</span> Hi-Five, AIDS (misnomer), GRID (Outdated c. 1983)</span>
                 </p>
             </div>
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/hiv-info.html">HIV</a></h2>
-                <p>HIV stands for Human Immunodeficiency Virus, which over time becomes AIDS (Acquired Immunodeficiency Syndrome)</p>
+                <p>HIV stands for Human Immunodeficiency Virus, which over time becomes AIDS (Acquired Immunodeficiency Syndrome). There is no known cure for HIV/AIDS.</p>
             </div>
             <div class="carousel-slide">
                 <h2><a class="detailed-page-link" href="pages/hiv-info.html">HIV</a></h2>
                 <p>HIV are retroviruses, which means they integrate thier own genome into the victim's, which is one of many ways a virus can hijack a cell.</p>
+            </div>
+
+            <!-- Controls to switch slides -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+            <!-- Indicators for which slide you are on -->
+            <div class="carousel-indicators">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>   
+            </div>
+        </div>
+
+
+       
+        <!-- General info carousel: Hepatitis -->
+        <div class="gen-info-carousel">
+                
+            <!-- Slides in carousel -->
+            <div class="carousel-slide">
+                <h2><a class="detailed-page-link" href="pages/hiv-info.html">Hepatitis</a></h2>
+                <p>
+                    <span style="font-weight: bold;">Types:</span> A, B, C</span><br><br>
+                    <span style="font-weight: bold;">Cause:</span> Fluid transmission </span><br><br>
+                    <span style="font-weight: bold;">Effects:</span> Liver inflammation</span><br><br>
+                    <span style="font-weight: bold;">Common names:</span> Viral Hepatitis, Hep (A, B, C)</span>
+                </p>
+            </div>
+            <div class="carousel-slide">
+                <h2><a class="detailed-page-link" href="pages/hiv-info.html">HIV</a></h2>
+                <p>Hepatitis is usually caused by a virus, but it simply stands for the symptom "liver inflammation"</p>
+            </div>
+            <div class="carousel-slide">
+                <h2><a class="detailed-page-link" href="pages/hiv-info.html">HIV</a></h2>
+                <p>About 20% of Hepatitis C cases become chronic, which leads to a lifetime of management and no cure.</p>
             </div>
 
             <!-- Controls to switch slides -->
